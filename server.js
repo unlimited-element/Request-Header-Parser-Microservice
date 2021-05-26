@@ -26,7 +26,8 @@ app.get("/api/hello", function (req, res) {
 });
 
 app.get("/api/whoami", function (req, res) {
-  res.json({ipaddress: os.networkInterfaces().Ethernet[2].address, language: req.rawHeaders[29], software: req.rawHeaders[13]})
+  console.log(ip.address())
+  res.json({ipaddress: ip.address(), language: req.rawHeaders[29], software: req.rawHeaders[13]})
 });
 
 // listen for requests :)
